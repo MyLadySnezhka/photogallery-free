@@ -1,0 +1,29 @@
+{
+  "name": "photogallery",
+  "version": "1.0.0",
+  "description": "ПРАКТИКА: фотограллерея для фотографа и для заказов родителей",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "devstart": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyLadySnezhka/photogallery-free.git"
+  },
+  "keywords": [
+    "gallery"
+  ],
+  "author": "Snezhka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyLadySnezhka/photogallery-free/issues"
+  },
+  "homepage": "https://github.com/MyLadySnezhka/photogallery-free#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
