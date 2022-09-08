@@ -15,23 +15,23 @@ router.get('/uploads', (req, res) => {
 
 //загрузка одного изображения
 router.post('/uploads', uploads.single('photo'), function(req, res, next){
-        const file = req.file;
-            console.log ('Тип файла:', file.mimetype);
-            console.log ('Имя файла', file.originalname);
-            console.log ('Размер файла:', file.size);
-            console.log ('Путь для сохранения:', file.path);
-
-    res.send({ret_code: '0'});
+    const filedata = req.file;
+        if(!filedata)
+            res.send("Ошибка при загрузке файла");
+        else
+            //res.send("Файл загружен");
+            res.send('gallery1');
+        // console.log ('Тип файла:', filedata.mimetype);
+        // console.log ('Имя файла', filedata.originalname);
+        // console.log ('Размер файла:', filedata.size);
+        // console.log ('Путь для сохранения:', filedata.path);
+        console.log(filedata);
  });
  
 //загрузка нескольких изображений
 // router.post('/uploads', uploads.array('photo', 2), function(req, res, next){
-    
+  
 //     const file = req.file;
-//         console.log ('Тип файла: % s', file.mimetype);
-//         console.log ('Имя файла', file.originalname);
-//         console.log ('Размер файла:', file.size);
-//         console.log ('Путь для сохранения:', file.path);
 //     res.send('Завантажено!');
 //  });
 
